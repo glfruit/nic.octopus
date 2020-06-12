@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+      <div class="col col-md-6">
+        <h5 class="card-title">
+          {{ "::Menu:Expenses" | abpLocalization }}
+        </h5>
+      </div>
+      <div class="text-right col col-md-6"></div>
+    </div>
+  </div>
+  <div class="card-body">
+    <abp-table
+      [value]="expenses$ | async"
+      [abpLoading]="loading"
+      [headerTemplate]="tableHeader"
+      [bodyTemplate]="tableBody"
+      [rows]="10"
+      [scrollable]="true"
+    >
+    </abp-table>
+    <ng-template #tableHeader>
+      <tr>
+        <th>{{ "::Title" | abpLocalization }}</th>
+        <th>{{ "::Type" | abpLocalization }}</th>
+        <th>{{ "::OnDate" | abpLocalization }}</th>
+        <th>{{ "::Amount" | abpLocalization }}</th>
+      </tr>
+    </ng-template>
+    <ng-template #tableBody let-data>
+      <tr>
+        <td>{{ data.title }}</td>
+        <td>{{ expensesType[data.type] }}</td>
+        <td>{{ data.onDate | date }}</td>
+        <td>{{ data.amount }}</td>
+      </tr>
+    </ng-template>
+  </div>
+</div>

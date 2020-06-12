@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Nic.Octopus</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Nic.Octopus.MongoDB\Nic.Octopus.MongoDB.csproj" />
+    <ProjectReference Include="..\Nic.Octopus.TestBase\Nic.Octopus.TestBase.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
+    <PackageReference Include="Mongo2Go" Version="2.2.12" />
+  </ItemGroup>
+
+</Project>
