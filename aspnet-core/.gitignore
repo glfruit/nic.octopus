@@ -258,3 +258,5 @@ src/Nic.Octopus.IdentityServer/Logs/*
 src/Nic.Octopus.HttpApi.Host/Logs/*
 src/Nic.Octopus.HttpApi.Host/Logs/*
 src/Nic.Octopus.DbMigrator/Logs/*
+
+.ionide
